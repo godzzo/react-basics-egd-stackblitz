@@ -5,8 +5,10 @@ import Greeting from "./Greeting";
 export default class UserLogin extends React.Component {
   constructor(props) {
     super(props);
+
     this.handleLoginClick = this.handleLoginClick.bind(this);
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
+
     this.state = { isLoggedIn: false };
   }
 
@@ -19,6 +21,7 @@ export default class UserLogin extends React.Component {
 
   render() {
     const isLoggedIn = this.state.isLoggedIn;
+
     let button = isLoggedIn ? 
       <LogoutButton onClick={this.handleLogoutClick} /> : 
       <LoginButton onClick={this.handleLoginClick} />;
